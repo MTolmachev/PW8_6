@@ -6,7 +6,6 @@ public class RelayScript : MonoBehaviour
 {
     private List<Transform> runners = new List<Transform>();
     private GameObject[] GO;
-    [SerializeField] Transform finish;
 
     [SerializeField] float speed;
     [SerializeField] float passDistance;
@@ -30,10 +29,23 @@ public class RelayScript : MonoBehaviour
         runners[currentRunner].position = Vector3.MoveTowards(runners[currentRunner].position, runners[nextRunner].position, speed * Time.deltaTime);
         if(Vector3.Distance(runners[currentRunner].position, runners[nextRunner].position) <= passDistance)
         {
-            currentRunner++;
-            nextRunner++;
+            if (nextRunner == runners.Count - 1)
+                nextRunner = 0;
+            else
+                nextRunner++;
+
+            if (currentRunner != runners.Count - 1)
+                currentRunner++;
+
         }
-        
+
+        if (Vector3.Distance(runners[runners.Count - 1].position, runners[0].position) <= passDistance)
+        {
+            currentRunner = 0;
+            nextRunner = 1;
+
+        }
+
 
     }
 }

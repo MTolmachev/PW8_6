@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1576238565153847443}
   - component: {fileID: 8051672069368698087}
   - component: {fileID: 934065604900046357}
-  - component: {fileID: 399213868105250399}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Runner
@@ -98,16 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &399213868105250399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7417675065712043330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f255f78b0417e0c45a8ee7b6c5d0f2ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
